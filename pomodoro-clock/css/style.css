@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+@font-face {
+    font-family: DS-Digital;
+    src: url('dsdigi.woff');
+  }
+
+:root{
+    --siteBackground: linear-gradient(35deg,rgb(5, 5, 44),rgb(11, 202, 97));
+    --displayContainerColor: linear-gradient(180deg, rgb(39, 25, 25), rgb(85, 17, 17));
+    --buttonColor: linear-gradient(195deg, rgb(240, 103, 40), rgb(218, 38, 14));
+    --buttonsize: 2.3vw;
+    --equalsColor: rgb(23,226,23);
+    --equalsGradient: linear-gradient(195deg, rgb(180, 241, 11), rgb(79, 201, 8));
+    --acColor: linear-gradient(195deg, rgb(211, 49, 49), rgb(179, 11, 11));
+    --operatorColor: linear-gradient(195deg, rgb(101, 173, 231), rgb(7, 116, 124));
+    
+    --displayTextColor: rgb(87, 245, 39);
+    --displayTextSize: 30px;
+    --displayBackground: rgb(37, 17, 17);
+    --displayBorderColor: rgb(255, 102, 0);
+    
+    --instructionsTextSize: 10pt;
+
+    --titleTextColor: rgb(211, 147, 9);
+    --titleTextSize: 36px;
+    --titleTextFont: Orbitron;
+    
+    --labelTextSize: 17px;
+    --labelTextColor: white;
+
+    --iconSize: 28px;
+    --iconColor: white;
+    --topIconSize: 18px;
+
+    --timeLeftFont: DS-Digital;
+    --timeLeftSize: 70px;
+    --timeLeftColor: rgb(248, 213, 17);
+
+    --timerLabelColor:rgb(13, 235, 161);
+    --timerLabelSize: 40px;
+
+    --footerTextColor: rgb(218, 152, 67);
+
+    --standardDispBorder: 3px solid var(--displayBorderColor);
+
+}   
+
+body,html{
+    color:rgb(2, 1, 2);
+    background-color:rgb(14, 29, 9);
+    font-family: Roboto Condensed;
+}
+
+  
+#whole-site-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--siteBackground);
+}
+
+#portfolio-return{
+    position:absolute;
+    left:1%;
+    top: 1%;
+    color: white;
+}
+
+#footbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--footerTextColor)
+}
+
+#foot-text{
+    font-size: 10pt;
+}
+
+#demo{
+    position:fixed;
+    left:50%;
+    top:4%;
+}
+
+
+#all-display{
+    width:60vw;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#display-container{
+    width: 50vw;
+    height:65vh;
+    background: var(--displayContainerColor); 
+    border-radius: 15px;
+    border: 3px solid rgb(53, 75, 3);
+    box-shadow: -6px 12px 10px 10px rgb(37, 17, 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#title-text{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    height:10%;
+    width:90%;
+    font-family: var(--titleTextFont);
+    font-size:var(--titleTextSize);
+    color: var(--titleTextColor);
+    text-align:center;
+    margin-top:1vh;
+    
+}
+
+.temp-border{
+    border: 2px solid white;
+}
+
+.centered-col-flexbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#top-center-container{
+    height:270px;
+    width:300px;
+}
+
+#timer-display{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    border-radius: 10px;
+    border: var(--standardDispBorder);
+    background: var(--displayBackground);
+    height:17vh;
+    min-height:140px;
+    width:78%;
+  
+}
+
+#digit-box{
+    width:70%;
+    text-align:left;
+}
+
+.display-label{
+    width:90%;
+    text-align:center;
+    color: var(--labelTextColor);
+    font-size: var(--labelTextSize);
+    font-family: var(--titleTextFont);
+    margin-bottom: 1vh;
+}
+
+
+.setting-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--timeLeftFont);
+    width: 85px;
+    height:30%;
+    text-align: center;
+    border-radius:10px;
+    background: var(--displayBackground);
+    font-size: var(--displayTextSize);
+    color: var(--displayTextColor);
+    border: 3px solid var(--displayBorderColor);
+}
+
+
+
+#timer-label{
+    font-family: var(--timeLeftFont);
+    font-size: var(--timerLabelSize);
+    color: var(--timerLabelColor); 
+    margin-bottom: -18px;
+}
+
+#time-left{
+    font-family: var(--timeLeftFont);
+    font-size: var(--timeLeftSize);
+    color: var(--timeLeftColor);
+}
+.button-icon {
+    color: var(--iconColor);
+    font-size: var(--iconSize);
+}
+
+.button-icon2 {
+    color: var(--iconColor);
+    font-size: var(--topIconSize);
+}
+
+#start_stop{
+    width: 35%;
+    height: 50px;
+    border-radius:10px;
+    color: var(--iconColor);
+    background: var(--equalsGradient);
+}
+
+#reset{
+    width:25%;
+    height:45px;
+    border-radius: 10px;
+    background: var(--acColor);
+}
+
+#top-button-box{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width:64%;
+    height: 80px;
+}
+
+.button-box{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width:65%;
+    height: 34%;
+}
+
+.arrow-button{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 50px;
+    width: 50px;
+    border-radius:30%;
+    background: var(--buttonColor);
+    text-align: center;
+}
+
+#bottom-container{
+    height: 200px;
+    width: 100%;
+    flex-direction: row;
+}
+
+#session-box{
+    height:100%;
+    width:49%;
+}
+
+#break-box{
+    height:100%;
+    width:49%;
+}
+
+
+
+
+@media only screen and (max-height: 630px){
+
+    #all-display{
+        width:90vw;
+    }
+    
+    #display-container{
+        width:70vw;
+        height: 80vh;
+        
+    }
+}
+
+@media only screen and (max-width: 800px){
+    :root{
+        --titleTextSize: 30px;
+    }
+    #all-display{
+        width: 90vw;
+        height:95vh;
+    }
+
+    #display-container{
+        width: 85vw;
+        height:90vh;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    :root{
+        --titleTextSize: 25px;
+    }
+}
+
+@media only screen and (max-height: 490px){
+    :root{
+        --labelTextSize: 13px;
+    }
+
+    .display-label{
+        width:80%;
+    }
+
+}
+
+@media only screen and (max-width:450px){
+
+    :root{
+        --iconSize: 22px;
+        --labelTextSize: 14px;
+    }
+
+    #display-container{
+        width: 94vw;
+        height:85vh;
+    }
+    #top-center-container{
+        height:250px;
+        width:300px;
+    }
+
+    #bottom-container{
+        height: 230px;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #top-button-box{
+        width:70%;
+        height: 70px;
+    }
+
+    .button-box{
+        width:90%;
+        height: 50%;
+    }
+
+    .arrow-button{
+        height: 70px;
+        width: 70px;
+        border-radius:30%;
+    }
+
+    #start_stop{
+        width: 45%;
+        height: 60px;
+        border-radius:10px;
+    }
+    
+    #reset{
+        width:35%;
+        height:55px;
+        border-radius: 10px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 330px){
+
+    #timer-display{
+        width: 70%;
+        min-height:120px;
+    }
+
+}
+
+@media only screen and (min-width: 800px){
+    .button-box{
+        width:45%;
+    }
+}
